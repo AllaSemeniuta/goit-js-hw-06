@@ -1,0 +1,28 @@
+body {
+    padding: 0 15px;
+}
+ul{
+    padding: 0;
+}
+li {
+    list-style: none; 
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: -15px;
+}
+
+.gallery__item {
+    flex-basis: calc((100% - 60px) / 3);
+    
+ 
+}
