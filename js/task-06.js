@@ -8,11 +8,11 @@ function onInputBlur (event) {
     const inputValueLengt = event.currentTarget.value.trim().length
 
 
-    if(numberOfSymbols === inputValueLengt) {
-        inputEl.classList.add('valid')
-    } else (
-        inputEl.classList.add('invalid')
-    )
-   
-}
 
+    if(numberOfSymbols != inputValueLengt) {
+        inputEl.classList.add('invalid')
+    } else {
+        inputEl.classList.remove('invalid')
+        inputEl.classList.add('valid') 
+    }
+}

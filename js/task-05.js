@@ -5,8 +5,15 @@ const spanEl = document.querySelector('#name-output')
 
 inputEl.addEventListener('input', onInputInput)
 
-function onInputInput (event) {
+
+function onInputInput () {
+
     const inputNameTrim = inputEl.value.trim()
 
-    spanEl.textContent = inputNameTrim
+    if(inputNameTrim.length === 0) {
+        spanEl.textContent = "Anonymous"
+    } else { spanEl.textContent = inputNameTrim
+    }
+
+
 }
