@@ -22,15 +22,18 @@ function handlerButtonDestroyClick(){
 
 function createBoxes(amount) {
 
+  const boxMarkup = []
+
   for (let i=0; i <= amount-1; i+=1 ) {
 
   const newBox =  document.createElement('div');
   newBox.style.width += 30 + (10 * [i]) + "px"
   newBox.style.height += 30 + (10 * [i]) + "px"
   newBox.style.backgroundColor = getRandomHexColor();
-  boxWraper.append(newBox)
-
+  boxMarkup.push(newBox)
   }
+
+  boxWraper.append(...boxMarkup)
 }
 
 function getRandomHexColor() {
@@ -38,3 +41,4 @@ function getRandomHexColor() {
     .toString(16)
     .padStart(6, 0)}`;
 }
+
